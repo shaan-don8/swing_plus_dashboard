@@ -1,0 +1,42 @@
+{
+  "iz_contact_model": {
+    "model_file": "swing_plus_iz_contact_ridge.joblib",
+    "target": "iz_contact_percent",
+    "target_transform": "percent -> proportion -> clipped -> logit",
+    "features_raw": [
+      "avg_swing_speed",
+      "avg_swing_length",
+      "attack_angle",
+      "attack_direction",
+      "vertical_swing_path"
+    ],
+    "feature_engineering": "PolynomialFeatures(degree=2, interaction_only=True, include_bias=False)",
+    "weight": "in_zone_swing",
+    "train_years": [
+      2023,
+      2024
+    ],
+    "test_year": 2025,
+    "model_type": "Ridge pipeline with StandardScaler"
+  },
+  "z_whiff_model": {
+    "model_file": "swing_plus_z_whiff_ridge.joblib",
+    "target": "z_swing_miss_percent",
+    "target_transform": "percent -> proportion -> clipped -> logit",
+    "features_raw": [
+      "avg_swing_speed",
+      "avg_swing_length",
+      "attack_angle",
+      "attack_direction",
+      "vertical_swing_path"
+    ],
+    "feature_engineering": "PolynomialFeatures(degree=2, interaction_only=True, include_bias=False)",
+    "weight": "in_zone_swing",
+    "train_years": [
+      2023,
+      2024
+    ],
+    "test_year": 2025,
+    "model_type": "Ridge pipeline with StandardScaler"
+  }
+}
