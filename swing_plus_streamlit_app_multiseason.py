@@ -10,7 +10,7 @@ import streamlit as st
 st.set_page_config(page_title="Swing+ Dashboard", layout="wide")
 
 BASE_DIR = Path(__file__).resolve().parent
-MODEL_DIR = BASE_DIR / "swing_plus_models"
+MODEL_DIR = BASE_DIR
 
 FEATURE_COLS = [
     "avg_swing_speed",
