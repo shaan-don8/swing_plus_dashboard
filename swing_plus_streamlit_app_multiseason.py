@@ -43,7 +43,7 @@ METRIC_ORDER = [
 
 @st.cache_data
 def load_data() -> pd.DataFrame:
-    csv_path = BASE_DIR / "swing_plus_scored_stats50.csv"
+    csv_path = BASE_DIR / "swing_plus_scored_stats51.csv"
     df = pd.read_csv(csv_path)
     if "last_name, first_name" in df.columns and "player_name" not in df.columns:
         df = df.rename(columns={"last_name, first_name": "player_name"})
